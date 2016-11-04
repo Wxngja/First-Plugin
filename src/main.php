@@ -2,12 +2,16 @@
 
 namespace Test;
 
-pocketmine\plugin\PluginBase;
-pocketmine\event\Listener;
+use pocketmine\plugin\PluginBase;
 
-class Test extends PluginBase implements Listener {
+class Test extends PluginBase {
 
    public function onEnable(){
      $this->getLogger()->info("Plugin Loaded");
    }
+    
+   public function onDisable(){
+     $this->getLogger()->info("Plugin Disabled");
+   }
+}
 
